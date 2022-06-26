@@ -16,3 +16,5 @@ if __name__ == '__main__':
     blink_bfprint.sendTransform((0.00, 0.00, 0.005),
         tf.transformations.quaternion_from_euler(0, 0, 0),
         rospy.Time.now(),"base_link","base_footprint")
+    
+    rate.sleep()
