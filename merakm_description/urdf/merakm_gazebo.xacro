@@ -69,7 +69,6 @@
       <publishTf>true</publishTf>
       <publishOdomTF>true</publishOdomTF>      
       <publishWheelTF>false</publishWheelTF>
-      <robotBaseFrame>base_footprint</robotBaseFrame>
       <publishWheelJointState>true</publishWheelJointState>
       <legacyMode>false</legacyMode>
       <rosDebugLevel>na</rosDebugLevel>
