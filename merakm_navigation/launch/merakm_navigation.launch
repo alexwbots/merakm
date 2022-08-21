@@ -10,8 +10,18 @@
   <!-- AMCL -->
   <include file="$(find merakm_navigation)/launch/amcl.launch"/>
 
-  <!-- move_base -->
-  <include file="$(find merakm_navigation)/launch/move_base.launch">
+  <!-- move_base >
+  <include file="$(find merakm_navigation)/launch/move_base_astar_dwa.launch">
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include-->
+
+  <!-- move_base - global planner rrt - local planner dwa -->
+  <!--include file="$(find merakm_navigation)/launch/move_base_rrt_dwa.launch">
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include-->
+  
+  <!-- move_base - global planner simple - local planner dwa -->
+  <include file="$(find merakm_navigation)/launch/move_base_astar_simple.launch">
     <arg name="move_forward_only" value="$(arg move_forward_only)"/>
   </include>
 
