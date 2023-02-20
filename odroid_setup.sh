@@ -28,3 +28,5 @@ cd
 
 echo "Install additional packages"
 sudo apt-get install openssh-client
+sudo apt install python3-pip
+pip install odroid-wiringpi
