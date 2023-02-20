@@ -26,7 +26,15 @@ cd catkin_ws
 catkin_make
 cd
 
+echo "Enable automatic connection with internet ???"
+
+echo "Enable I2C ???"
+
 echo "Install additional packages"
 sudo apt-get install -y openssh-client
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:hardkernel/ppa
+sudo apt update
+sudo apt install -y odroid-wiringpi libwiringpi-dev
 sudo apt install -y python3-pip
 pip install odroid-wiringpi
