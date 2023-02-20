@@ -26,3 +26,5 @@ cd catkin_ws
 catkin_make
 cd
 
+echo "Install additional packages"
+sudo apt-get install openssh-client
