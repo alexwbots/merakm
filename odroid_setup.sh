@@ -26,7 +26,18 @@ cd catkin_ws
 catkin_make
 cd
 
-echo "Enable automatic connection with internet ???"
+echo "Enable automatic wifi connection"
+echo "allow-hotplug wlan0" >> /etc/network/interface
+echo "iface wlan0 inet dhcp" >> /etc/network/interface
+echo "wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf" >> /etc/network/interface
+echo 'ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev' >> /etc/wpa_supplicant/wpa_supplicant.conf
+echo 'update_config=1' >> /etc/wpa_supplicant/wpa_supplicant.conf
+echo ' ' >> /etc/wpa_supplicant/wpa_supplicant.conf
+echo 'network={' >> /etc/wpa_supplicant/wpa_supplicant.conf
+echo '  ssid="ALEXANDER.-AC"' >> /etc/wpa_supplicant/wpa_supplicant.conf
+echo '  psk="norecuerdo"' >> /etc/wpa_supplicant/wpa_supplicant.conf
+echo '  key_mgmt=WPA-PSK' >> /etc/wpa_supplicant/wpa_supplicant.conf
+echo '}' >> /etc/wpa_supplicant/wpa_supplicant.conf
 
 echo "Enable I2C ???"
 
