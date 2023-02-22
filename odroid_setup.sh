@@ -24,6 +24,8 @@ cd
 mkdir -p catkin_ws/src
 cd catkin_ws
 catkin_make
+echo "source /home/odroid/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 cd
 
 echo "Enable automatic wifi connection"
