@@ -55,4 +55,4 @@ pip install odroid-wiringpi
 echo "Install Arduino-ROS"
 cd
 wget https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz
-tar -xvzf arduino-1.8.19-linux64.tar.xz
+tar -xf arduino-1.8.19-linux64.tar.xz
