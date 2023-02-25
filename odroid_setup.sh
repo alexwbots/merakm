@@ -56,3 +56,5 @@ echo "Install Arduino-ROS"
 cd
 wget https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz
 tar -xf arduino-1.8.19-linux64.tar.xz
+cd arduino-1.8.19
+./install.sh
