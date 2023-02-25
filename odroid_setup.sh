@@ -63,3 +63,9 @@ sudo apt-get install -y ros-${ROS_DISTRO}-rosserial-arduino ros-${ROS_DISTRO}-ro
 cd 
 mkdir -p Arduino/libraries
 rosrun rosserial_arduino make_libraries.py .
+
+echo "Download the ROS packages for the robot"
+cd catkin_ws/src/
+git clone https://github.com/alexwbots/merakm.git
+cd ..
+catkin_make
