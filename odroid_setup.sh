@@ -51,3 +51,8 @@ sudo apt update
 sudo apt install -y odroid-wiringpi libwiringpi-dev
 sudo apt install -y python3-pip
 pip install odroid-wiringpi
+
+echo "Install Arduino-ROS"
+cd
+wget https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz
+tar -xvzf arduino-1.8.19-linux64.tar.xz
