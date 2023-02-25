@@ -58,5 +58,8 @@ wget https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz
 tar -xf arduino-1.8.19-linuxaarch64.tar.xz
 cd arduino-1.8.19
 sudo ./install.sh
-
+cd
 sudo apt-get install -y ros-${ROS_DISTRO}-rosserial-arduino ros-${ROS_DISTRO}-rosserial
+cd 
+mkdir -p Arduino/libraries
+rosrun rosserial_arduino make_libraries.py .
