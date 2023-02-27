@@ -14,15 +14,16 @@ USB2_PORT_TMP=$(grep tty <<< "$USB2" | head -4 )
 USB2_PORT_TMP=$(echo "$USB2_PORT_TMP" | tail -n1 ) 
 USB2_PORT=$(echo "$USB2_PORT_TMP" | cut -d " " -f 9 )
 
-if [ $USB1_ID == 'c534' ]; then
+if [[ $USB1_ID -eq "c534" ]]; then
   PORT_RIGHT=${USB1_PORT}
   PORT_LEFT=${USB2_PORT}
-elif [ $USB1_ID == '7523' ]; then
+elif [[ $USB1_ID -eq "7523" ]]; then
   PORT_RIGHT=${USB2_PORT}
   PORT_LEFT=${USB1_PORT}
 fi
 
 echo "The right port is ${PORT_RIGHT} and the left port is ${PORT_LEFT}"
+echo ""
 
 PORT_LEFT="/dev/${PORT_LEFT}"
 PORT_RIGHT="/dev/${PORT_RIGHT}"
