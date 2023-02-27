@@ -51,6 +51,7 @@ sudo apt update
 sudo apt install -y odroid-wiringpi libwiringpi-dev
 sudo apt install -y python3-pip
 pip install odroid-wiringpi
+sudo sysctl -w kernel.dmesg_restrict=0
 
 echo "Install Arduino-ROS"
 cd
