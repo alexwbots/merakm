@@ -25,3 +25,6 @@ include_directories(
 
 add_executable(robot_odom src/robot_odom.cpp)
 target_link_libraries(robot_odom ${catkin_LIBRARIES})
+
+add_executable(robot_cmd src/robot_cmd.cpp)
+target_link_libraries(robot_cmd ${catkin_LIBRARIES})

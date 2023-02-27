@@ -1,6 +1,6 @@
 <launch>
 
-
+  <node pkg="merakm_bringup" type="cmd_node.py" name="cmd_node" />
 
   <node pkg="merakm_bringup" type="robot_odom" name="robot_odom" />
 
