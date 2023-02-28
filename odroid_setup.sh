@@ -55,10 +55,11 @@ sudo sysctl -w kernel.dmesg_restrict=0
 
 echo "Install Arduino-ROS"
 cd
-wget https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz
-tar -xf arduino-1.8.19-linuxaarch64.tar.xz
-rm arduino-1.8.19-linuxaarch64.tar.xz
-cd arduino-1.8.19
+wget https://downloads.arduino.cc/arduino-1.8.9-linuxaarch64.tar.xz
+tar -xf arduino-1.8.9-linuxaarch64.tar.xz
+rm arduino-1.8.9-linuxaarch64.tar.xz
+cd arduino-1.8.9
+./arduino-linux-setup.sh $USER
 sudo ./install.sh
 cd
 sudo apt-get install -y ros-${ROS_DISTRO}-rosserial-arduino ros-${ROS_DISTRO}-rosserial
