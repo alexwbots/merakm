@@ -44,8 +44,7 @@ echo '}' >> /etc/wpa_supplicant/wpa_supplicant.conf
 echo "Enable I2C ???"
 
 echo "Install additional packages"
-sudo apt-get install -y openssh-client
-sudo apt install software-properties-common
+sudo apt-get install -y openssh-client software-properties-common
 sudo add-apt-repository ppa:hardkernel/ppa
 sudo apt update
 sudo apt install -y odroid-wiringpi libwiringpi-dev
