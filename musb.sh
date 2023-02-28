@@ -5,14 +5,14 @@ USB1_PROD=$(grep idProduct <<< "$USB1" | head -1 )
 USB1_ID=$(grep idProduct <<< "$USB1_PROD" | cut -d'=' -f 3 | cut -b 1-4 )
 USB1_PORT_TMP=$(grep tty <<< "$USB1" | head -4 )
 USB1_PORT_TMP=$(echo "$USB1_PORT_TMP" | tail -n1 ) 
-USB1_PORT=$(echo "$USB1_PORT_TMP" | cut -d " " -f 9 )
+USB1_PORT=$(echo "$USB1_PORT_TMP" | cut -d " " -f 11 )
 
 USB2=$(grep 1-1.3 <<< "$USB_LISTS")
 USB2_PROD=$(grep idProduct <<< "$USB2" | head -1 )
 USB2_ID=$(grep idProduct <<< "$USB2_PROD" | cut -d'=' -f 3 | cut -b 1-4 )
 USB2_PORT_TMP=$(grep tty <<< "$USB2" | head -4 )
 USB2_PORT_TMP=$(echo "$USB2_PORT_TMP" | tail -n1 ) 
-USB2_PORT=$(echo "$USB2_PORT_TMP" | cut -d " " -f 9 )
+USB2_PORT=$(echo "$USB2_PORT_TMP" | cut -d " " -f 11 )
 
 if [[ $USB1_ID -eq "c534" ]]; then
   PORT_RIGHT=${USB1_PORT}
