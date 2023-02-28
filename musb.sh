@@ -1,13 +1,13 @@
 USB_LISTS=$(dmesg)
 
-USB1=$(grep 1-2 <<< "$USB_LISTS")
+USB1=$(grep 1-1.1 <<< "$USB_LISTS")
 USB1_PROD=$(grep idProduct <<< "$USB1" | head -1 )
 USB1_ID=$(grep idProduct <<< "$USB1_PROD" | cut -d'=' -f 3 | cut -b 1-4 )
 USB1_PORT_TMP=$(grep tty <<< "$USB1" | head -4 )
 USB1_PORT_TMP=$(echo "$USB1_PORT_TMP" | tail -n1 ) 
 USB1_PORT=$(echo "$USB1_PORT_TMP" | cut -d " " -f 9 )
 
-USB2=$(grep 3-2 <<< "$USB_LISTS")
+USB2=$(grep 1-1.3 <<< "$USB_LISTS")
 USB2_PROD=$(grep idProduct <<< "$USB2" | head -1 )
 USB2_ID=$(grep idProduct <<< "$USB2_PROD" | cut -d'=' -f 3 | cut -b 1-4 )
 USB2_PORT_TMP=$(grep tty <<< "$USB2" | head -4 )
