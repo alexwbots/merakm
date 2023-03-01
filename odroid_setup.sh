@@ -5,10 +5,10 @@ sudo apt-get upgrade -y
 
 echo "Install ROS NOETIC."
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt install -y curl git
+sudo apt-get install -y curl git build-essential
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-sudo apt update
-sudo apt install -y ros-noetic-desktop
+sudo apt-get update
+sudo apt-get install -y ros-noetic-desktop
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
